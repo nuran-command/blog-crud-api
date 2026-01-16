@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Blog CRUD</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fff5f5;
+      max-width: 700px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+
+    h2 {
+      color: #c40000;
+      margin-top: 30px;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 8px;
+      margin: 6px 0 12px 0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    textarea {
+      height: 80px;
+      resize: vertical;
+    }
+
+    button {
+      background-color: #c40000;
+      color: white;
+      border: none;
+      padding: 6px 12px;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-right: 5px;
+    }
+
+    button:hover {
+      background-color: #a30000;
+    }
+
+    #blogsList {
+      margin-top: 10px;
+    }
+
+    .blog-item {
+      border: 1px solid #ccc;
+      padding: 8px;
+      margin-bottom: 8px;
+      border-radius: 4px;
+      background-color: #ffecec;
+    }
+
+    .blog-item p {
+      margin: 4px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Create Blog</h2>
+  <input id="create-title" placeholder="Title">
+  <input id="create-author" placeholder="Author (optional)">
+  <textarea id="create-body" placeholder="Body"></textarea>
+  <button onclick="createBlog()">Create</button>
+
+  <h2>Get Blogs</h2>
+  <button onclick="loadBlogs()">Load All Blogs</button>
+  <div id="blogsList"></div>
+
+  <h2>Update Blog</h2>
+  <input id="update-id" placeholder="Blog ID to update">
+  <input id="update-title" placeholder="New Title">
+  <input id="update-author" placeholder="New Author">
+  <textarea id="update-body" placeholder="New Body"></textarea>
+  <button onclick="updateBlog()">Update</button>
+
+  <h2>Delete Blog</h2>
+  <input id="delete-id" placeholder="Blog ID to delete">
+  <button onclick="deleteBlog()">Delete</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
